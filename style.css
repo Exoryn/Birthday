@@ -1,0 +1,70 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fceabb, #f8b500);
+  color: #2c3e50;
+  text-align: center;
+  margin: 0;
+  padding: 2em;
+  overflow-x: hidden;
+}
+
+header {
+  margin-bottom: 2em;
+}
+
+#countdown {
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+#wishlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  padding: 1em;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+button {
+  margin-top: 1em;
+  background-color: #ff7675;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body::before,
+body::after {
+  content: "🌴";
+  position: fixed;
+  font-size: 5em;
+  top: 20%;
+  animation: sway 2s infinite ease-in-out;
+}
+
+body::before {
+  left: 1%;
+}
+
+body::after {
+  right: 1%;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+}
